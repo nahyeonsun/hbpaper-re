@@ -1,0 +1,78 @@
+#title{  
+
+}
+#title .wrap{
+  height: 100%;
+  gap: 15px;
+  max-width: 100%;
+}
+#title .wrap .witem{
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+#title .wrap .witem1{
+  background-image: url(../img/title_01.jpg);
+  /*! display: none; */
+}
+#title .wrap .witem1 h2{  
+  font-weight: bold;
+  font-size: 58px;
+  color: #222;
+  animation-name: title;
+  animation-duration: 0.5s;
+  animation-direction: reverse;
+  animation-timing-function: ease-in;
+  animation-delay: 1s;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  text-align: center;
+}
+#title .wrap .witem1 p{   
+  font-size: 20px;
+  color: #222;
+  animation-name: title;
+  animation-duration: 0.5s;
+  animation-direction: reverse;
+  animation-timing-function: ease-in;
+  animation-delay: 1s;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+@keyframes title{
+  0%{
+   opacity: 1;
+   transform: translatey(-100%);
+  }
+  100%{
+   opacity: 0;   
+   transform: translatey(0%);
+  }
+}
+#title .wrap h2 span{
+  display: none;
+}
+#title .wrap .witem2{
+  display: none;
+  background-image: url(../img/title_02.jpg);
+}
+#title .wrap .witem2 h2{  
+  font-size: 20px;
+  color: white;
+}
+#title .wrap .witem2 p{  
+  font-size: 58px;
+  color: white;
+}
+#title .wrap .witem3{
+  background-image: url(../img/title04.jpg);
+  display: none;
+}
+#title .wrap .witem3 h2{  
+  font-size: 20px;
+  color: #222;
+}
+#title .wrap .witem3 p{  
+  font-size: 58px;
+  color: #222;
+}

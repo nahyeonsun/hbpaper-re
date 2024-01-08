@@ -1,0 +1,93 @@
+footer {
+  background-color: #222222;
+}
+footer .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  padding: 0 calc((100% - 1520px) / 2);
+}
+footer .wrap h1 {
+
+}
+footer .wrap ul.pnb{
+  width: 60%;
+}
+footer .wrap ul.pnb li {
+  
+}
+footer .wrap ul.pnb li a {
+  color: white;
+  display: block;
+  line-height: 4;
+}
+footer .wrap ul.pnb li:first-child a{
+  padding-right: 15px;
+}
+footer .wrap ul.pnb li:not(:first-child) a{
+  padding: 0 15px;
+}
+footer .wrap div{
+  width: 40%;
+  justify-content: end;
+  align-items: center;
+}
+footer .wrap div ul{
+  align-items: center;
+}
+footer .wrap div ul li{
+  padding: 0 15px;
+}
+footer .wrap div ul li a{
+  color: white;
+  display: block;
+  line-height: 4;
+  
+}
+footer .wrap select{
+  background-color: #555555;
+  width: 120px;
+  height: 30px;
+  color: #eee;
+  text-align: center;
+}
+footer .wrap select option{
+  
+}
+footer .wrap a.hb{  
+  position: absolute;
+  right: calc((100% - 1520px) / 1.5);
+  top: 96px;
+  background-image: url(../img/logo2.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 115px;
+  height: 25px;
+  font-size: 0;
+}
+footer .wrap a.blog {
+  position: absolute;
+  right: calc((100% - 1520px) / 2);
+  top: 85px;
+  background-image: url(../img/blog_btn.png);
+  background-size: cover;
+  width: 41px;
+  height: 41px;
+  font-size: 0;
+}
+footer .wrap address {
+  width: 100%;
+  color: #777;
+}
+footer .wrap address::before{
+  content: "";
+  width: 100vw;
+  display: block;
+  border-top: 1px solid #777;
+  margin-left: calc((1920px - 1520px) / -2);
+  margin-bottom: 20px;
+}
+footer .wrap p { 
+  color: #777;
+  margin-bottom: 30px;
+}
