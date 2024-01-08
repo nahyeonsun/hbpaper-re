@@ -14,7 +14,7 @@
   }
   /*   헤더  */
   header{  
-   position: absolute;
+    position: absolute;
   }
   header .wrap h1 a{   
     margin-left: 20px;
@@ -48,10 +48,9 @@
   section#business .wrap ul li a::before{    
     width: 100%;
   }
-  section#products .pro2 article h3{
-    
-  order: 0;
-  padding-bottom: 10px;
+  section#products .pro2 article h3{   
+    order: 0;
+    padding-bottom: 10px;
   }
   section#products .pro2 article figure a figcaption::after{
     display: none;
@@ -136,7 +135,7 @@
     right: 15px;
   }
   footer .wrap a.hb{
-  display: none;
+   display: none;
   }
 }
 @media screen and (max-width:768px){
@@ -292,4 +291,4 @@
     margin-bottom: 20px;
   }
 }
-}
+
