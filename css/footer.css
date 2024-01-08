@@ -95,3 +95,24 @@ footer .wrap p {
   color: #777;
   margin-bottom: 30px;
 }
+footer a.top{
+  color: #879140;
+  text-transform: uppercase;
+  position: fixed;
+  right: 75px;
+  bottom: 1px;
+  z-index: 1;
+  display: flex;
+  font-size: 13px;
+  font-weight: bold;
+  flex-direction: column;
+}
+footer a.top::before{
+  content: "";
+  background-image: url(../img/top.svg);
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}

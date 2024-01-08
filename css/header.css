@@ -6,6 +6,9 @@ header {
 header .wrap {
   height: 100px;
   align-items: center;
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  /*! grid-template-columns: 1fr 1fr 1fr; */
 }
 header .wrap h1 {
 
@@ -20,7 +23,7 @@ header .wrap h1 a {
   background-size: contain;
 }
 header .wrap ul.gnb {
-  
+  margin-right: 100px;
 }
 header .wrap ul.gnb li {
 
@@ -28,7 +31,7 @@ header .wrap ul.gnb li {
 header .wrap ul.gnb li a {
   display: block;
   line-height: 100px;
-  padding: 0 50px;
+  padding: 0 34px;
   font-size: 18px;
   font-weight: bold;
   color: #222;
