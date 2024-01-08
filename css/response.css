@@ -177,7 +177,6 @@
   .ham{
     display: flex;
   }
-
 /*     타이틀      */
   #title{
     min-height: auto;
@@ -189,7 +188,7 @@
   #title .wrap .witem1 h2 span{
     display: block;
   }
-  #title .wrap p{    
+  #title .wrap .witem1 p{    
    font-size: calc(20px * 0.8);
   }
 /*     business      */
@@ -283,6 +282,9 @@
   }
   footer .wrap address::before{
     display: none;
+  }
+  footer .wrap address span{    
+    display: block;
   }
   footer .wrap p{
     order: 5;  

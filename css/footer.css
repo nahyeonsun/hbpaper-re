@@ -78,6 +78,7 @@ footer .wrap a.blog {
 footer .wrap address {
   width: 100%;
   color: #777;
+  display: n;
 }
 footer .wrap address::before{
   content: "";
@@ -86,6 +87,9 @@ footer .wrap address::before{
   border-top: 1px solid #777;
   margin-left: calc((1920px - 1520px) / -2);
   margin-bottom: 20px;
+}
+footer .wrap address span{
+  display: none;
 }
 footer .wrap p { 
   color: #777;
