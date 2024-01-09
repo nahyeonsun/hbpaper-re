@@ -37,24 +37,7 @@
     height: 70vw;
   }
   /*  비즈니스  */
-  section#business .wrap ul{    
-    gap: 30px;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  section#business .wrap ul li{    
-    width: calc(80% - 15px);
-  }
-  section#business .wrap ul li a::before{    
-    width: 100%;
-  }
-  section#products .pro2 article h3{   
-    order: 0;
-    padding-bottom: 10px;
-  }
-  section#products .pro2 article figure a figcaption::after{
-    display: none;
-  }
+
   /*  products  */
   section#products .pro2{
     width: 100%;
@@ -138,6 +121,7 @@
    display: none;
   }
 }
+
 @media screen and (max-width:768px){
   .vh100{
     min-height: auto;
@@ -184,6 +168,10 @@
     padding: 0 15px;
     text-align: center;
   }
+  #title .wrap .witem1 h2{
+    margin-bottom: 0;
+    font-size: calc(78px * 0.8);
+  }
   #title .wrap .witem1 h2 span{
     display: block;
   }
@@ -191,23 +179,8 @@
    font-size: calc(20px * 0.8);
   }
 /*     business      */
-  section#business .wrap p.h3{
-    display: none;
-  }
-  section#business .wrap ul{
-    display: initial;
-  }
-  section#business .wrap ul li{
-    width: initial;
-    margin-bottom: 20px;
-    padding: 20px;
-  }
-  section#business .wrap ul li a{
-    perspective: initial;
-  }
-  section#business .wrap ul li a::before{
-    width: calc(100vw - 70px);
-    height: calc(48.57vw - 30px);
+  section#business .wrap ul li:nth-child(2) a::before{
+    
   }
 /*     products     */
   section#products .pro1 h2{    
@@ -232,6 +205,9 @@
   display: none;
   }
   /*  뉴스  */
+  section#news .wrap p{ 
+    font-size: calc(16px * 0.9);
+  }
   section#news .wrap ul li:nth-child(n+6){
     display: none;
   }
@@ -239,20 +215,14 @@
   footer .wrap{
     padding: 0 15px; 
   }
-  footer .wrap ul.pnb{
-    display: none;
+  footer .wrap ul.fnb{  
+    width: 100%;
   }
-  footer .wrap div ul li{    
-    padding: 0 3px;
-  }
-  footer .wrap ul.pnb li a{
-    font-size: 10px;
-  }
-  footer .wrap ul.pnb li:first-child a{
+  footer .wrap ul.fnb li:not(first-child) a{
     padding: 1px;
   }
-  footer .wrap ul.pnb li:not(first-child) a{
-    padding: 1px;
+  footer .wrap ul.fnb li a{
+    font-size: 12px;
   }
   footer .wrap select{
     width: 95px;
@@ -262,6 +232,7 @@
   footer .wrap div{    
     width: 100%;
     justify-content: space-between;
+    order: 6;
   }
   footer .wrap div ul li a{
     font-size: 11px;
@@ -269,6 +240,7 @@
   }
   footer .wrap select{
 
+  margin-bottom: 15px;
   }
   footer .wrap a.blog{    
     position: static;

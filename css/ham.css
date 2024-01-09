@@ -12,14 +12,5 @@
   width: 100%;
   height: 3px;
   display: block;
-  background-color: #222;  
-}
-.ham span:nth-child(1){
-
-}
-.ham span:nth-child(2){
-
-}
-.ham span:nth-child(3){
-
+  background-color: #5e652d;  
 }

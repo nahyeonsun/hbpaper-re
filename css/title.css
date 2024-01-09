@@ -18,7 +18,6 @@
 #title .wrap .witem1 h2{  
   font-weight: bold;
   font-size: 78px;
-  color: #736A40;
   animation-name: title;
   animation-duration: 0.5s;
   animation-direction: reverse;
@@ -28,7 +27,7 @@
   animation-fill-mode: forwards;
   text-align: center;
   color: #5e652d;
-
+  margin-bottom: 30px;
 }
 #title .wrap .witem1 p{   
   font-size: 20px;
@@ -41,11 +40,12 @@
   animation-fill-mode: forwards;
   display: inherit;
   color: #5e652d;
+  margin-bottom: 100px;
 }
 @keyframes title{
   0%{
    opacity: 1;
-   transform: translatey(-100%);
+   transform: translatey(-20%);
   }
   100%{
    opacity: 0;   

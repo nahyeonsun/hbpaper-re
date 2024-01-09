@@ -34,32 +34,34 @@ section#business .wrap {
 section#business .wrap h2 { 
   text-align: center;
 }
-
 section#business .wrap ul { 
+  gap: 80px;
   position: relative;
-  margin: 0 auto;
 }
 section#business .wrap ul li {  
+  width: 50%;
 }
 section#business .wrap ul li:nth-child(1){  
-  position: absolute;
-  top: 25%;
-  right: 800px;
-}
-section#business .wrap ul li:nth-child(2){
-}
-section#business .wrap ul li:hover{
-    /*! box-shadow: 0px 0px 15px #ccc; */
+  
 }
 section#business .wrap ul li a {
-  perspective: 800px;
+  perspective: 1000px;
+  text-align: center;
+}
+section#business .wrap ul li:nth-child(1) a{  
+  position: absolute;
+  top: 15%;
+}
+section#business .wrap ul li:nth-child(3) a{  
+  position: absolute;
+  top: 15%;
 }
 section#business .wrap ul li a::before{
   content: "";
-  width: 702px;
-  height: 411px;
+  width: 700px;
+  height: 345px;
   display: block;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 section#business .wrap ul li:nth-child(1) a::before{
@@ -70,61 +72,46 @@ section#business .wrap ul li:nth-child(1) a::before{
 }
 section#business .wrap ul li:nth-child(2) a::before{
   background-image: url(../img/busi_02.jpg);
-  background-color: #e4e2e2;
-  transform: rotateY(0deg);
-  transition: all 1s;
+
 }
 section#business .wrap ul li:nth-child(2) a:hover::before{
   transform: rotateY(60deg);
+  transition: all 1s;
+}
+section#business .wrap ul li:nth-child(3) a::before{
+  background-image: url(../img/busi_03.jpg);
+  width: 350px;
+  height: 189px;
+  opacity: 0.5;
 }
 section#business .wrap ul li a h3 {  
   margin: 20px 0 10px 0;
+  font-weight: bold;
+  font-size: 23px;
 }
-section#business .wrap ul li a h3:nth-child(1){
-  
-}
-
 section#business .wrap ul li a p {
   
 }
-section#business .wrap a.right{
+section#business .wrap a.left {
   background-image: url(../img/bright.svg);
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   background-repeat: no-repeat;
   background-size: contain;
   position: absolute;
-  right: 28%;
-  font-size: 0;
-}
-section#business .wrap a.left{
-  background-image: url(../img/bright.svg);
-  width: 40px;
-  height: 40px;
-  background-repeat: no-repeat;
-  background-size: contain;
-  position: absolute;
-  left: 28%;
+  left: 29%;
   font-size: 0;
   rotate: 180deg;
 }
-section#business .wrap a.left:hover{
-  color: #ccc;
-}
-section#business .wrap p.h6 { 
-  text-align: end;
-  margin-top: 10px;
-}
-section#business .wrap p.h6::after{
-  content: "";
-  background-image: url(../img/arrow_black.svg);
-  width: 23px;
-  height: 26px;
-  display: inline-block;
+section#business .wrap a.right{
+  background-image: url(../img/bright.svg);
+  width: 30px;
+  height: 30px;
   background-repeat: no-repeat;
-  background-size: cover;
-  margin-left: 7px;
-  vertical-align: -7px;
+  background-size: contain;
+  position: absolute;
+  right: 29%;
+  font-size: 0;
 }
 section#products{
   background-color: #EDF0D3;
