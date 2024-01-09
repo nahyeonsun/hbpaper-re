@@ -1,5 +1,6 @@
 footer {
   background-color: #222222;
+  background-color: #3b3f1c;
 }
 footer .wrap {
   display: flex;
@@ -10,21 +11,21 @@ footer .wrap {
 footer .wrap h1 {
 
 }
-footer .wrap ul.pnb{
+footer .wrap ul.fnb{
   width: 60%;
 }
-footer .wrap ul.pnb li {
+footer .wrap ul.fnb li {
   
 }
-footer .wrap ul.pnb li a {
+footer .wrap ul.fnb li a {
   color: white;
   display: block;
   line-height: 4;
 }
-footer .wrap ul.pnb li:first-child a{
+footer .wrap ul.fnb li:first-child a{
   padding-right: 15px;
 }
-footer .wrap ul.pnb li:not(:first-child) a{
+footer .wrap ul.fnb li:not(:first-child) a{
   padding: 0 15px;
 }
 footer .wrap div{
@@ -45,7 +46,7 @@ footer .wrap div ul li a{
   
 }
 footer .wrap select{
-  background-color: #555555;
+  background-color: #5c622f;
   width: 120px;
   height: 30px;
   color: #eee;
@@ -77,22 +78,22 @@ footer .wrap a.blog {
 }
 footer .wrap address {
   width: 100%;
-  color: #777;
+  color: #999;
   display: n;
 }
 footer .wrap address::before{
   content: "";
-  width: 100vw;
+  width: calc(100vw - 17px);
   display: block;
   border-top: 1px solid #777;
-  margin-left: calc((1920px - 1520px) / -2);
+  margin-left: calc((1903px - 1520px) / -2);
   margin-bottom: 20px;
 }
 footer .wrap address span{
   display: none;
 }
 footer .wrap p { 
-  color: #777;
+  color: #999;
   margin-bottom: 30px;
 }
 footer a.top{
@@ -100,7 +101,7 @@ footer a.top{
   text-transform: uppercase;
   position: fixed;
   right: 75px;
-  bottom: 1px;
+  bottom: 20px;
   z-index: 1;
   display: flex;
   font-size: 13px;
