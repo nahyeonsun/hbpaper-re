@@ -14,6 +14,7 @@
   }
   .h5{
     font-size: calc(20px * 0.95);
+    margin-bottom: 10px;
   }
   /*   헤더  */
   header{  
@@ -32,42 +33,68 @@
     padding: 15px;
   }
   /*  프로모션   */
+  section#promotion {  
+    background-color: #EDF0D3;
+  }
   section#promotion .wrap{    
     padding: 0 15px;
   }
   section#promotion .wrap iframe{    
     width: calc(100vw - 30px);
     height: 70vw;
+    top: 6%;
+    left: 0;
+  }  
+  section#promotion .left{
+  transform: translateY(-184%) translateX(-16%);
+  }
+  section#promotion .left p.p{    
+    font-size: calc(76px * 0.8);
+  }
+  section#promotion .left p.h3{    
+    font-size: calc(25px * 0.8);
   }
   /*  business  */
+  section#business .wrap ul{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
   section#business .wrap ul li:nth-child(1) a::before {
-    width: 45vw;
-    height: 12.5vw;
+    width: 61vw;
+    height: 30.64285714285714vw;
+    opacity: 1;
+  }
+  section#business .wrap ul li:nth-child(1) a:hover::before{
+    transform: rotateY(60deg);
+    transition: all 1s;
   }
   section#business .wrap ul li:nth-child(2) a::before{
-    content: "";
-    width: 50vw;
-    height: 24.64285714285714vw;
+    width: 61vw;
+    height: 30.64285714285714vw;
   }
   section#business .wrap ul li:nth-child(3) a::before {
-    width: 45vw;
-    height: 12.5vw;
+    width: 61vw;
+    height: 30.64285714285714vw;
+    opacity: 1;
   }
-  section#business .wrap ul li a p{    
-    font-size: calc(16px * 0.85);
+  section#business .wrap ul li:nth-child(3) a:hover::before{
+    transform: rotateY(60deg);
+    transition: all 1s;
   }
-  section#business .wrap a.left{    
-    left: 24%;
+  section#business .wrap ul li a h3{    
+    margin: 0;
   }
-  section#business .wrap a.right{    
-    right: 21%;
+  section#business .wrap a.left{
+    display: none;
+  }
+    section#business .wrap a.right{
+    display: none;
   }
   /*  products  */
   section#products .pro2{
     width: 100%;
-    height: 90%;
     display: flex;
-    margin-top: 10px;
   }
   section#products .pro2 article figure a img{
     width: 31vw;
@@ -83,9 +110,6 @@
   section#news .wrap ul{
     display: initial;
   }
-  section#news .wrap ul li{
-    /*! padding: 15px 0; */
-  } 
   section#news .wrap ul li a::after{
     content: "";
     border-bottom: solid 1px;
@@ -113,6 +137,10 @@
   section#news .wrap ul li a figure figcaption{
      display: none;
   }
+  /*  asid  */
+  aside{
+    display: none;
+  }
   /*  footer  */
   footer .wrap{
     padding: 0 15px;
@@ -130,9 +158,13 @@
   }
   footer .wrap a.blog{    
     right: 15px;
+    top: 41px;
   }
   footer .wrap a.hb{
-   display: none;
+    display: none;
+  }
+  footer a.top{
+    display: none;
   }
 }
 
@@ -148,10 +180,9 @@
   }
   .h3{
     font-size: calc(30px * 0.6);
-    text-align: center;
   }
   .h4{
-    font-size: calc(24px * 0.6);
+    font-size: calc(24px * 0.7);
   }
   main .wrap{
     padding: 0 15px;
@@ -192,50 +223,31 @@
   #title .wrap .witem1 p{    
    font-size: calc(20px * 0.8);
   }
-/*     business      */
-  section#business .wrap ul{
-    display: flex;
-    position: relative;
-    flex-direction: column;
+ /*     promotion      */
+  section#promotion .left{   
+    transform: translateY(-367%) translateX(-45px);
+    width: 100%;
+    height: 175px;
   }
-  section#business .wrap ul li{    
-    width: initial;
+  section#promotion .left p.p{    
+    font-size: calc(76px * 0.4);
   }
-  section#business .wrap ul li a{
-    width: 100px;
-    height: 50px;
-    position: relative;
-    top: 0;
-  }
-  section#business .wrap ul li a::before{
-    width: calc(100vw - 30px);
-    height: calc(48.57vw - 30px);
-    opacity: 1;
-  }
-  section#business .wrap a.left{
-    display: none;
-  }
-    section#business .wrap a.right{
-    display: none;
+  section#promotion .left p.h3{
   }
 /*     products     */
-  section#products .pro1 h2{    
-    margin-bottom: 20px;
-  }
   section#products .pro1 > p{    
     display: none;
   }
   section#products .pro2{   
     gap: 5px;
-    width: 90%;
   }
   section#products .pro2 article h3{    
     font-size: calc(20px * 0.7);
     font-weight: 300;
   }
   section#products .pro2 article figure a img{
-    width: 35vw;
-    height: 35vw;
+    width: 33vw;
+    height: 33vw;
   }
   section#products .pro2 article figure a figcaption{    
     display: none;
@@ -264,7 +276,7 @@
     width: 95px;
     height: 21px;
     font-size: 11px;
-}
+  }
   footer .wrap div{    
     width: 100%;
     justify-content: space-between;
@@ -275,11 +287,9 @@
     padding-right: 7px;
   }
   footer .wrap select{
-
-  margin-bottom: 15px;
+    margin-bottom: 15px;
   }
   footer .wrap a.blog{    
-    position: static;
     order: 4;
   }
   footer .wrap address{    

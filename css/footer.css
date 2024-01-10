@@ -1,5 +1,5 @@
 footer {
-  background-color: #3b3f1c;
+  background-color: #292b1c;
 }
 footer .wrap {
   display: flex;
@@ -45,7 +45,7 @@ footer .wrap div ul li a{
   
 }
 footer .wrap select{
-  background-color: #5c622f;
+  background-color: #43462d;
   width: 120px;
   height: 30px;
   color: #eee;

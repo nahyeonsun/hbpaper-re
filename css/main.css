@@ -1,5 +1,5 @@
 section#promotion {  
-  /*! background-color: #EDF0D3; */
+  
 }
 section#promotion .wrap {  
   height: 100%;
@@ -7,56 +7,56 @@ section#promotion .wrap {
   max-width: 100%;
 }
 section#promotion .wrap iframe {
-  width: 51.5%;
+  width: 980px;
   position: relative;
   left: 19%;
+  z-index: 1;
+  width: 41vw;
+  height: 23vw;
 }
 section#promotion .left{ 
   background-color: #EDF0D3;
-  width: 1200px;
+  width: 1093px;
   height: 720px;
-  position: relative;
-  bottom: 90%;
-  z-index: -1;
+  /*! position: relative; */
+  /*! bottom: 90%; */
+  /*! z-index: -1; */
+  transform: translateY(-112%);
+  justify-content: center;
 }
 section#promotion .left h2 {
-  position: absolute;
-  left: 66px;
-  top: 30%;
   color: #5e652d;
+  transform: translateX(18%);
 }
 section#promotion .left p.p {  
-  position: absolute;
-  left: 66px;
-  top: 40%;
-  font-size: 76px;
+  font-size: 75px;
   line-height: 1.2;
   font-weight: 200;
+  transform: translateX(18%);
+  margin-bottom: 20px;
 }
 section#promotion .left p.h3 {
-  position: absolute;
-  left: 71px;
-  top: 70%;
   line-height: 1.2;
   font-weight: 200;
-  font-size: 25px;
+  font-size: 23px;
+  transform: translateX(18%);
 }
 section#business {  
   background-color: #FAFBEF;
 }
 section#business .wrap {
   height: 100%;
-  gap: 15px;
+  align-items: center;
 }
 section#business .wrap h2 { 
   text-align: center;
 }
 section#business .wrap ul { 
-  gap: 80px;
-  position: relative;
+  gap: 70px;
+  justify-content: center;
+  align-items: center;
 }
 section#business .wrap ul li {  
-  width: 50%;
 }
 section#business .wrap ul li:nth-child(1){  
   
@@ -65,25 +65,21 @@ section#business .wrap ul li a {
   perspective: 1000px;
 }
 section#business .wrap ul li:nth-child(1) a{  
-  position: absolute;
-  top: 15%;
 }
 section#business .wrap ul li:nth-child(3) a{  
-  position: absolute;
-  top: 15%;
 }
 section#business .wrap ul li a::before{
   content: "";
-  width: 700px;
-  height: 345px;
+  width: 673px;
+  height: 311px;
   display: block;
   background-size: contain;
   background-repeat: no-repeat;
 }
 section#business .wrap ul li:nth-child(1) a::before{
-  background-image: url(../img/busi_01.png);
-  width: 350px;
-  height: 189px;
+  background-image: url(../img/busi_01.jpg);
+  width: 352px;
+  height: 164px;
   opacity: 0.5;
 }
 section#business .wrap ul li:nth-child(2) a::before{
@@ -95,8 +91,8 @@ section#business .wrap ul li:nth-child(2) a:hover::before{
 }
 section#business .wrap ul li:nth-child(3) a::before{
   background-image: url(../img/busi_03.jpg);
-  width: 350px;
-  height: 189px;
+  width: 352px;
+  height: 164px;
   opacity: 0.5;
 }
 section#business .wrap ul li a h3 {  
@@ -112,7 +108,7 @@ section#business .wrap a.left {
   background-repeat: no-repeat;
   background-size: contain;
   position: absolute;
-  left: 29%;
+  left: 30%;
   font-size: 0;
   rotate: 180deg;
 }
@@ -123,7 +119,7 @@ section#business .wrap a.right{
   background-repeat: no-repeat;
   background-size: contain;
   position: absolute;
-  right: 29%;
+  right: 30%;
   font-size: 0;
 }
 section#products{
