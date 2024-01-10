@@ -5,7 +5,7 @@ header {
   border-bottom: solid 1px #ccc;
 }
 header .wrap {
-  height: 100px;
+  height: 85px;
   align-items: center;
   display: grid;
   grid-template-columns: 1fr auto auto;
@@ -30,7 +30,7 @@ header .wrap ul.gnb li {
 }
 header .wrap ul.gnb li a {
   display: block;
-  line-height: 100px;
+  line-height: 85px;
   padding: 0 34px;
   font-size: 18px;
   font-weight: 600;

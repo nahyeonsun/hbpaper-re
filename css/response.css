@@ -9,6 +9,9 @@
   .h3{
     font-size: calc(40px * 0.85);
   }
+  .h4{
+    font-size: calc(23px * 0.85);
+  }
   .h5{
     font-size: calc(20px * 0.95);
   }
@@ -36,8 +39,29 @@
     width: calc(100vw - 30px);
     height: 70vw;
   }
-  /*  비즈니스  */
-
+  /*  business  */
+  section#business .wrap ul li:nth-child(1) a::before {
+    width: 45vw;
+    height: 12.5vw;
+  }
+  section#business .wrap ul li:nth-child(2) a::before{
+    content: "";
+    width: 50vw;
+    height: 24.64285714285714vw;
+  }
+  section#business .wrap ul li:nth-child(3) a::before {
+    width: 45vw;
+    height: 12.5vw;
+  }
+  section#business .wrap ul li a p{    
+    font-size: calc(16px * 0.85);
+  }
+  section#business .wrap a.left{    
+    left: 24%;
+  }
+  section#business .wrap a.right{    
+    right: 21%;
+  }
   /*  products  */
   section#products .pro2{
     width: 100%;
@@ -46,18 +70,11 @@
     margin-top: 10px;
   }
   section#products .pro2 article figure a img{
-    width: 200px;
-    height: 200px;
+    width: 31vw;
+    height: 31vw;
   }
   section#products .pro2 article figure a figcaption{    
-    font-size: 12px;
-    opacity: 1;
-    background-color: #edf0d300;
-    color: #555;
-    height: 27%;
-    top: 100%;
-    justify-content: flex-start;
-    text-align: initial;
+    display: none;
   }
   /*  news  */
     section#news .wrap h3{
@@ -103,9 +120,6 @@
   }
   footer .wrap ul.pnb{    
     display: none;
-  }
-  footer .wrap div{
-    width: 100%;
   }
   footer .wrap div ul.fnb{
     width: 100%;
@@ -179,8 +193,30 @@
    font-size: calc(20px * 0.8);
   }
 /*     business      */
-  section#business .wrap ul li:nth-child(2) a::before{
-    
+  section#business .wrap ul{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+  }
+  section#business .wrap ul li{    
+    width: initial;
+  }
+  section#business .wrap ul li a{
+    width: 100px;
+    height: 50px;
+    position: relative;
+    top: 0;
+  }
+  section#business .wrap ul li a::before{
+    width: calc(100vw - 30px);
+    height: calc(48.57vw - 30px);
+    opacity: 1;
+  }
+  section#business .wrap a.left{
+    display: none;
+  }
+    section#business .wrap a.right{
+    display: none;
   }
 /*     products     */
   section#products .pro1 h2{    
@@ -198,11 +234,11 @@
     font-weight: 300;
   }
   section#products .pro2 article figure a img{
-    width: 130px;
-    height: 130px;
+    width: 35vw;
+    height: 35vw;
   }
   section#products .pro2 article figure a figcaption{    
-  display: none;
+    display: none;
   }
   /*  뉴스  */
   section#news .wrap p{ 
