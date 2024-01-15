@@ -14,7 +14,7 @@
   }
   .h5{
     font-size: calc(20px * 0.95);
-    margin-bottom: 10px;
+    margin-bottom: 5px;
   }
 /*     header     */
   header .wrap h1 a{   
@@ -56,7 +56,7 @@
     padding-left: 0;
   }
   section#promotion .left h2{
-
+    margin-bottom: 5px;
   }
   section#promotion .left p.p{    
     font-size: calc(76px * 0.5);
@@ -109,8 +109,8 @@
     grid-template-rows: auto auto auto auto;
   }
   section#products .pro2 article figure a img{
-    width: 33vw;
-    height: 33vw;
+    width: 30vw;
+    height: 30vw;
   }
   section#products .pro2 article figure a figcaption{    
     display: none;
@@ -200,6 +200,9 @@
     padding: 0 15px;
   }
 /*      header     */
+  header .wrap{
+    
+  }
   header .wrap h1 a{    
     width: 120px;
     height: 25px;
@@ -238,8 +241,10 @@
   }
   section#promotion .left p.p{    
     font-size: calc(76px * 0.4);
+    margin-bottom: 10px;
   }
   section#promotion .left p.h3{
+  font-size: calc(16px * 0.9);
   }
 /*     products     */
   section#products .pro1 > p{    
@@ -258,6 +263,7 @@
 /*     news     */
   section#news .wrap p{ 
     font-size: calc(16px * 0.9);
+    padding: 0px;
   }
   section#news .wrap ul li:nth-child(n+6){
     display: none;

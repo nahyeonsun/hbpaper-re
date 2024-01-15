@@ -108,25 +108,25 @@ section#business .wrap ul li a p {
   
 }
 section#business .wrap a.left {
-  background-image: url(../img/bright.svg);
-  width: 30px;
-  height: 30px;
+  background-image: url(../img/right.svg);
+  width: 40px;
+  height: 40px;
   background-repeat: no-repeat;
   background-size: contain;
   position: absolute;
   left: 30%;
   font-size: 0;
-  rotate: 180deg;
 }
 section#business .wrap a.right{
-  background-image: url(../img/bright.svg);
-  width: 30px;
-  height: 30px;
+  background-image: url(../img/right.svg);
+  width: 40px;
+  height: 40px;
   background-repeat: no-repeat;
   background-size: contain;
   position: absolute;
   right: 30%;
   font-size: 0;
+  rotate: 180deg;
 }
 section#products{
   background-color: #EDF0D3;
