@@ -233,7 +233,18 @@
     display: block;
   }
   #title .wrap .witem1 p{    
-   font-size: calc(20px * 0.8);
+   font-size: calc(20px * 0.6);
+  }
+  #title .wrap .witem2 h2{
+    margin-bottom: 0;
+    font-size: calc(78px * 0.25);
+  }
+  #title .wrap .witem2 h2 span{
+    display: block;
+  }
+  #title .wrap .witem2 p{    
+   font-size: 50px;
+   margin-top: 10px;
   }
 /*      promotion    */
   section#promotion .left{   

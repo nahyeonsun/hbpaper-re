@@ -25,6 +25,51 @@
     <link rel="stylesheet" href="css/aside.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/response.css">
+    <!-- 제이쿼리 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("header div.wrap ul.gnb li").hover(
+                function(){
+                    $("header div.wrap .sublist").addClass("show").hide().fadeIn(1000);
+                },
+                function(){
+                    //$("header div.wrap .sublist").removeClass("show");
+                }
+            );
+            $("header div.wrap .sublist").mouseleave(function(){
+                $("header div.wrap .sublist").removeClass("show");
+            });
+        });
+    </script>
+    <!-- slick -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.titleAni').slick({
+                infinite: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                speed: 5000,
+                dots:true,
+                arrows:true,
+                fade: true
+            });
+        });
+    </script>
+
+        <!-- aos -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            $(document).ready(function(){
+                AOS.init();
+            });
+        </script>
 </head>
 <body>
     <!-- 상단영역 -->
@@ -91,7 +136,7 @@
     </header>
     <!-- 타이틀영역 -->
     <div id="title" class="vh100">
-        <div class="wrap">
+        <div class="wrap titleAni">
             <div class="witem witem1 flex column align-center center">
                 <h2 class="h1">자연으로, <span class="block"></span>스마트하게</h2>
                 <p class="h5">그 소중한 가치를 알기에 우리는 돌아가려고 합니다.</p>
@@ -113,8 +158,8 @@
         <!-- promotion -->
         <section id="promotion" class="vh100">
             <div class="wrap flex column center">
-                <iframe width="1520" height="551" src="https://www.youtube.com/embed/9HyfO_V5cLw" title="자연으로 스마트하게, HB PAPER 기업 소개 영상" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                <div class="left flex column">
+                <iframe data-aos="fade-left" data-aos-duration="1000" width="1520" height="551" src="https://www.youtube.com/embed/9HyfO_V5cLw" title="자연으로 스마트하게, HB PAPER 기업 소개 영상" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <div data-aos="fade-right" data-aos-duration="1000" class="left flex column">
                     <h2 class="h5">MEDIA</h2>
                     <p class="p">HB PEPER<span class="block"></span>
                                 PROMOTION VIDEO</p>

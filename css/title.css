@@ -6,14 +6,22 @@
   gap: 15px;
   max-width: 100%;
 }
+#title .wrap .slick-list{
+  height: 100%;
+}
+#title .wrap .slick-list .slick-track{
+  height: 100%;
+}
 #title .wrap .witem{
   height: 100%;
   background-size: cover;
   background-position: center;
+  display: flex;
+  transform: scale(1.2);
+  transition: all 3s ease-in-out !important;
 }
 #title .wrap .witem1{
   background-image: url(../img/title_01.jpg);
-  /*! display: none; */
 }
 #title .wrap .witem1 h2{  
   font-weight: bold;
@@ -56,7 +64,6 @@
   display: none;
 }
 #title .wrap .witem2{
-  display: none;
   background-image: url(../img/title_02.jpg);
 }
 #title .wrap .witem2 h2{  
@@ -69,7 +76,6 @@
 }
 #title .wrap .witem3{
   background-image: url(../img/title04.jpg);
-  display: none;
 }
 #title .wrap .witem3 h2{  
   font-size: 20px;
@@ -78,4 +84,29 @@
 #title .wrap .witem3 p{  
   font-size: 58px;
   color: #222;
+}
+#title .wrap .slick-dots{  
+  bottom: 30px;
+}
+#title .wrap .slick-dots li button{  
+  position: relative;
+}
+#title .wrap .slick-dots li button::before{  
+  color: white;
+  opacity: 1;
+}
+#title .wrap .slick-dots li.slick-active button::before{ 
+  color: white;
+}
+#title .wrap .slick-dots li.slick-active button::after{ 
+  content: "";
+  width: 15px;
+  height: 15px;
+  border: 2px solid white;
+  display: block;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.6;
 }
