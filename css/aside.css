@@ -1,25 +1,43 @@
 aside{
   position: fixed;
   right: 20px;
-  top: calc(50% - 55px);
+  bottom: 0;
+}
+aside:hover::before{
+  margin-bottom: 10px;
+  transition: 0.3s;
+}
+aside::before{
+  content: "";
+  background: url(../img/rgt_arrow.png);
+  width: 10px;
+  height: 21px;
+  display: inline-block;
+  margin-bottom: 7px;
+  transform: translateX(-4px);
 }
 aside ul{
    
 }
 aside ul li:not(:last-child){
-  margin-bottom: 15px;
 }
 aside ul li a{
   font-size: 0;
-  width: 10px;
-  height: 10px;
+  width: 3px;
+  height: 50px;
   display: block;
-  background-color: #acabab;
-  border-radius: 50%;
+  background-color: rgba(0,0,0,0.3);
+}
+aside ul li a::before{ 
+  content: "";
+  background: url(../img/rgt_arrow.png);
+  display: block;
 }
 .currentB{
-  background-color: #879140; 
+  background-color: #333 !important; 
+  width: 3px;
 }
 .currentW{
-  background-color: white; 
+  background-color: #fff !important; 
+  width: 3px;
 }

@@ -34,6 +34,7 @@ section#promotion .left p.h3 {
   font-size: 23px;
   width: fit-content;
   transition: 0.2s ease-in-out;
+  color: #555;
 }
 section#promotion .left p.h3:hover{
   transform: scale(1.1);
@@ -61,9 +62,11 @@ section#business .wrap h2 {
   text-align: center;
 }
 section#business .wrap ul { 
-  gap: 70px;
-  justify-content: center;
-  align-items: center;
+  width: 100%;
+}
+section#business .slick-track{
+  
+  width: 100% !important;
 }
 section#business .wrap ul li {  
   
@@ -71,12 +74,23 @@ section#business .wrap ul li {
 section#business .wrap ul li:nth-child(1){  
   
 }
+section#business .slick-current {
+  opacity: 1 !important;
+}
+section#business .slick-slide{
+/*   opacity: 0.5; */
+}
 section#business .wrap ul li a {
-  perspective: 1000px;
+  content: "";
+  /*! width: 616px; */
+  /*! height: 311px; */
+  display: block;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 section#business .wrap ul li a::before{
   content: "";
-  width: 673px;
+  /*! width: 616px; */
   height: 311px;
   display: block;
   background-size: contain;
@@ -84,28 +98,19 @@ section#business .wrap ul li a::before{
 }
 section#business .wrap ul li:nth-child(1) a::before{
   background-image: url(../img/busi_01.jpg);
-  width: 352px;
-  height: 164px;
-  opacity: 0.5;
 }
 section#business .wrap ul li:nth-child(2) a::before{
   background-image: url(../img/busi_02.jpg);
 }
-section#business .wrap ul li:nth-child(2) a:hover::before{
-  transform: rotateY(60deg);
-  transition: all 1s;
-}
 section#business .wrap ul li:nth-child(3) a::before{
   background-image: url(../img/busi_03.jpg);
-  width: 352px;
-  height: 164px;
-  opacity: 0.5;
 }
 section#business .wrap ul li a h3 {  
   margin: 20px 0 10px 0;
 }
 section#business .wrap ul li a p {
   
+  color: #555;
 }
 section#business .wrap a.left {
   background-image: url(../img/right.svg);
@@ -116,6 +121,7 @@ section#business .wrap a.left {
   position: absolute;
   left: 30%;
   font-size: 0;
+  display: none;
 }
 section#business .wrap a.right{
   background-image: url(../img/right.svg);
@@ -126,7 +132,8 @@ section#business .wrap a.right{
   position: absolute;
   right: 30%;
   font-size: 0;
-  rotate: 180deg;
+  rotate: 180deg;  
+  display: none;
 }
 section#products{
   background-color: #EDF0D3;
@@ -330,9 +337,11 @@ section#news .wrap ul li a {
   display: flex;
   flex-direction: column;
   text-align: initial;
+  color: #555;
 }
 section#news .wrap ul li a span{
   font-weight: bold;
+  color: #222;
 }
 section#news .wrap ul li a figure{  
   position: relative;

@@ -116,3 +116,6 @@ footer a.top::before{
   background-repeat: no-repeat;
   background-size: contain;
 }
+.hideTop{
+  display: none;
+}

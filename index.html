@@ -29,20 +29,71 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function(){
-            $("header div.wrap ul.gnb li").hover(
-                function(){
-                    $("header div.wrap .sublist").addClass("show").hide().fadeIn(1000);
-                },
-                function(){
-                    //$("header div.wrap .sublist").removeClass("show");
-                }
-            );
+            $("header div.wrap ul.gnb li").hover(function(){
+                $("header div.wrap .sublist").stop().slideDown();
+            });
             $("header div.wrap .sublist").mouseleave(function(){
-                $("header div.wrap .sublist").removeClass("show");
+                $(this).slideUp();
+            });
+            $("aside ul li:nth-child(1) a").click(function(){
+                $("html,body").animate({scrollTop:"0px"},800);
+                return false; 
+            });
+            $("aside ul li:nth-child(2) a").click(function(){
+                $("html,body").animate({scrollTop:$(window).height()},800); 
+                return false; 
+            });
+            $("aside ul li:nth-child(3) a").click(function(){
+                $("html,body").animate({scrollTop:$(window).height()*2},800); 
+                return false; 
+            });
+            $("aside ul li:nth-child(4) a").click(function(){
+                $("html,body").animate({scrollTop:$(window).height()*3},800); 
+                return false; 
+            });
+            $("aside ul li:nth-child(5) a").click(function(){
+                $("html,body").animate({scrollTop:$(window).height()*4},800); 
+                return false; 
             });
             $(window).scroll(function(){
-                if($(window).scrollTop()<$("#title").height()){
-
+                if($(window).scrollTop()>$("header").height()){
+                    $("header").addClass("headerFix");
+                }else{ // 위에 조건이 맞지 않을 경우
+                    $("header").removeClass("headerFix");   
+                }
+                if($(window).scrollTop()<$("#title").height()){ 
+                // 어사이드메뉴
+                    $("aside ul li:nth-child(1)").addClass("currentW");
+                    $("aside ul li").not("aside ul li:nth-child(1)").removeClass("currentW, currentB");
+                    $("footer a.top").addClass("hideTop");
+                }else{
+                    $("footer a.top").removeClass("hideTop");
+                }
+            // 프로모션 영역에서 해당 메뉴 색상 변경
+                if($(window).scrollTop()>=$("#promotion").height()){ 
+                // 어사이드메뉴
+                    $("aside ul li:nth-child(2)").addClass("currentB");
+                    $("aside ul li").not("aside ul li:nth-child(2)").removeClass("currentW, currentB");
+                    // 타이틀 부분에서 탑버튼 숨기기
+                    // $("footer a.top").fadeOut();
+                }
+            // 비즈니스 영역에서 해당 메뉴 색상 변경
+                if($(window).scrollTop()>=$("#title").height()+$("#promotion").height()){
+                // 어사이드 메뉴
+                    $("aside ul li:nth-child(3)").addClass("currentB");
+                    $("aside ul li").not("aside ul li:nth-child(3)").removeClass("currentW, currentB");
+                }
+            // 프로덕션 영역에서 해당 메뉴 색상 변경
+                if($(window).scrollTop()>=$("#title").height()+$("#promotion").height()+$("#products").height()){
+                // 어사이드 메뉴
+                    $("aside ul li:nth-child(4)").addClass("currentB");
+                    $("aside ul li").not("aside ul li:nth-child(4)").removeClass("currentW, currentB");
+                }
+            // 뉴스 영역에서 해당 메뉴 색상 변경
+                if($(window).scrollTop()>=$("#title").height()+$("#promotion").height()+$("#products").height()+$("#news").height()){
+                // 어사이드 메뉴
+                    $("aside ul li:nth-child(5)").addClass("currentB");
+                    $("aside ul li").not("aside ul li:nth-child(5)").removeClass("currentW, currentB");
                 }
             });
         });
@@ -64,17 +115,73 @@
                 arrows:true,
                 fade: true
             });
+            $('.centerAni').slick({
+                infinite: true,
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                speed:1000,
+                dots:false,
+                arrows:true,
+            });
         });
     </script>
 
-        <!-- aos -->
-        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-        <script>
-            $(document).ready(function(){
-                AOS.init();
+    <!-- aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        $(document).ready(function(){
+            AOS.init();
+        });
+    </script>
+
+        <!-- 마우스 휠 -->
+    <script type="text/javascript">
+        window.onload = function () {
+            var elm = ".box";
+            $(elm).each(function (index) {
+                // 개별적으로 Wheel 이벤트 적용
+                $(this).on("mousewheel DOMMouseScroll", function (e) {
+                    e.preventDefault();
+                    var delta = 0;
+                    if (!event) event = window.event;
+                    if (event.wheelDelta) {
+                        delta = event.wheelDelta / 120;
+                        if (window.opera) delta = -delta;
+                    } 
+                    else if (event.detail)
+                        delta = -event.detail / 3;
+                    var moveTop = $(window).scrollTop();
+                    var elmSelecter = $(elm).eq(index);
+                    // 마우스휠을 위에서 아래로
+                    if (delta < 0) {
+                        if ($(elmSelecter).next() != undefined) {
+                            try{
+                                moveTop = $(elmSelecter).next().offset().top;
+                            }catch(e){}
+                        }
+                    // 마우스휠을 아래에서 위로
+                    } else {
+                        if ($(elmSelecter).prev() != undefined) {
+                            try{
+                                moveTop = $(elmSelecter).prev().offset().top;
+                            }catch(e){}
+                        }
+                    }
+                        
+                    // 화면 이동 0.8초(800)
+                    $("html,body").stop().animate({
+                        scrollTop: moveTop + 'px'
+                    }, {
+                        duration: 800, complete: function () {
+                        }
+                    });
+                });
             });
-        </script>
+        }
+    </script>
 </head>
 <body>
     <!-- 상단영역 -->
@@ -178,7 +285,7 @@
         <section id="business" class="vh100">
             <div class="wrap flex column center">
                 <h2 class="h5">BUSINESS</h2>
-                <ul class="flex between">
+                <ul class="centerAni">
                     <li>
                         <a href="" class="block">
                             <h3 class="h4">종이가공</h3>
@@ -197,8 +304,6 @@
                         </a>
                     </li>
                 </ul>
-                <a class="left" href="">left</a>
-                <a class="right" href="">right</a>
                 </a>
             </div>
         </section>
@@ -541,7 +646,7 @@
     <!-- 우측슬라이드아이콘 -->
     <aside>
         <ul>
-            <li><a href="" class="currentB eng">INTRO</a></li>
+            <li><a href="" class="">INTRO</a></li>
             <li><a href="">VIDEO</a></li>
             <li><a href="">BUSINESS</a></li>
             <li><a href="">PRODUCTS</a></li>
