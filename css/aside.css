@@ -1,43 +1,24 @@
 aside{
   position: fixed;
-  right: 20px;
-  bottom: 0;
-}
-aside:hover::before{
-  margin-bottom: 10px;
-  transition: 0.3s;
-}
-aside::before{
-  content: "";
-  background: url(../img/rgt_arrow.png);
-  width: 10px;
-  height: 21px;
-  display: inline-block;
-  margin-bottom: 7px;
-  transform: translateX(-4px);
+  left: 20px;
+  top: calc(50% - 130px);
 }
 aside ul{
    
 }
 aside ul li:not(:last-child){
+  margin-bottom: 20px;
 }
 aside ul li a{
   font-size: 0;
-  width: 3px;
-  height: 50px;
+  width: 10px;
+  height: 10px;
   display: block;
-  background-color: rgba(0,0,0,0.3);
-}
-aside ul li a::before{ 
-  content: "";
-  background: url(../img/rgt_arrow.png);
-  display: block;
+  background-color: #ccc;
+  border-radius: 50%;
+  transition: 0.5s;
 }
 .currentB{
-  background-color: #333 !important; 
-  width: 3px;
-}
-.currentW{
-  background-color: #fff !important; 
-  width: 3px;
+  font-size: 18px;
+  background-color: transparent;
 }

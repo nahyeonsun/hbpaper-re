@@ -23,43 +23,21 @@
 #title .wrap .witem1{
   background-image: url(../img/title_01.jpg);
 }
-#title .wrap .witem1 h2{  
+#title .wrap .witem h2{  
   font-weight: bold;
   font-size: 78px;
   animation-name: title;
-  animation-duration: 0.5s;
-  animation-direction: reverse;
-  animation-timing-function: ease-in;
-  animation-delay: 1s;
-  opacity: 0;
-  animation-fill-mode: forwards;
   text-align: center;
   color: #5e652d;
   margin-bottom: 30px;
 }
-#title .wrap .witem1 p{   
+#title .wrap .witem p{   
   font-size: 20px;
-  animation-name: title;
-  animation-duration: 0.5s;
-  animation-direction: reverse;
-  animation-timing-function: ease-in;
-  animation-delay: 1s;
-  opacity: 0;
-  animation-fill-mode: forwards;
   display: inherit;
   color: #5e652d;
   margin-bottom: 100px;
 }
-@keyframes title{
-  0%{
-   opacity: 1;
-   transform: translatey(-20%);
-  }
-  100%{
-   opacity: 0;   
-   transform: translatey(0%);
-  }
-}
+
 #title .wrap h2 span{
   display: none;
 }
@@ -67,23 +45,25 @@
   background-image: url(../img/title_02.jpg);
 }
 #title .wrap .witem2 h2{  
-  font-size: 20px;
   color: white;
+  margin-bottom: 30px;
 }
 #title .wrap .witem2 p{  
-  font-size: 58px;
   color: white;
+}
+#title .wrap .witem2 p span{
+  
 }
 #title .wrap .witem3{
   background-image: url(../img/title04.jpg);
 }
 #title .wrap .witem3 h2{  
-  font-size: 20px;
   color: #222;
+  margin-bottom: 30px;
 }
 #title .wrap .witem3 p{  
-  font-size: 58px;
   color: #222;
+  margin-bottom: 100px;
 }
 #title .wrap .slick-dots{  
   bottom: 30px;

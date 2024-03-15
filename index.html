@@ -25,14 +25,14 @@
     <link rel="stylesheet" href="css/aside.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/response.css">
-    <!-- 제이쿼리 -->
+    <!-- 제이쿼리&자바스크립트 -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function(){
-            $("header div.wrap ul.gnb li").hover(function(){
-                $("header div.wrap .sublist").stop().slideDown();
+            $("header .wrap ul.gnb li a").hover(function(){
+                $("header .lnb").stop().slideDown();
             });
-            $("header div.wrap .sublist").mouseleave(function(){
+            $("header .lnb").mouseleave(function(){
                 $(this).slideUp();
             });
             $("aside ul li:nth-child(1) a").click(function(){
@@ -58,42 +58,36 @@
             $(window).scroll(function(){
                 if($(window).scrollTop()>$("header").height()){
                     $("header").addClass("headerFix");
-                }else{ // 위에 조건이 맞지 않을 경우
+                } else{ // 위에 조건이 맞지 않을 경우
                     $("header").removeClass("headerFix");   
                 }
                 if($(window).scrollTop()<$("#title").height()){ 
                 // 어사이드메뉴
-                    $("aside ul li:nth-child(1)").addClass("currentW");
-                    $("aside ul li").not("aside ul li:nth-child(1)").removeClass("currentW, currentB");
+                    $("aside ul li:nth-child(1) a").addClass("currentB");
+                    $("aside ul li").not("aside ul li:nth-child(1) a").removeClass("currentB");
                     $("footer a.top").addClass("hideTop");
                 }else{
                     $("footer a.top").removeClass("hideTop");
                 }
             // 프로모션 영역에서 해당 메뉴 색상 변경
                 if($(window).scrollTop()>=$("#promotion").height()){ 
-                // 어사이드메뉴
-                    $("aside ul li:nth-child(2)").addClass("currentB");
-                    $("aside ul li").not("aside ul li:nth-child(2)").removeClass("currentW, currentB");
-                    // 타이틀 부분에서 탑버튼 숨기기
-                    // $("footer a.top").fadeOut();
+                    $("aside ul li:nth-child(2) a").addClass("currentB");
+                    $("aside ul li a").not("aside ul li:nth-child(2) a").removeClass("currentB");
                 }
             // 비즈니스 영역에서 해당 메뉴 색상 변경
                 if($(window).scrollTop()>=$("#title").height()+$("#promotion").height()){
-                // 어사이드 메뉴
-                    $("aside ul li:nth-child(3)").addClass("currentB");
-                    $("aside ul li").not("aside ul li:nth-child(3)").removeClass("currentW, currentB");
+                    $("aside ul li:nth-child(3) a").addClass("currentB");
+                    $("aside ul li a").not("aside ul li:nth-child(3) a").removeClass("currentB");
                 }
             // 프로덕션 영역에서 해당 메뉴 색상 변경
                 if($(window).scrollTop()>=$("#title").height()+$("#promotion").height()+$("#products").height()){
-                // 어사이드 메뉴
-                    $("aside ul li:nth-child(4)").addClass("currentB");
-                    $("aside ul li").not("aside ul li:nth-child(4)").removeClass("currentW, currentB");
+                    $("aside ul li:nth-child(4) a").addClass("currentB");
+                    $("aside ul li a").not("aside ul li:nth-child(4) a").removeClass("currentB");
                 }
             // 뉴스 영역에서 해당 메뉴 색상 변경
                 if($(window).scrollTop()>=$("#title").height()+$("#promotion").height()+$("#products").height()+$("#news").height()){
-                // 어사이드 메뉴
-                    $("aside ul li:nth-child(5)").addClass("currentB");
-                    $("aside ul li").not("aside ul li:nth-child(5)").removeClass("currentW, currentB");
+                    $("aside ul li:nth-child(5) a").addClass("currentB");
+                    $("aside ul li a").not("aside ul li:nth-child(5) a").removeClass("currentB");
                 }
             });
         });
@@ -116,14 +110,14 @@
                 fade: true
             });
             $('.centerAni').slick({
-                infinite: true,
-                slidesToShow: 3,
-                slidesToScroll: 3,
-                autoplay: true,
-                autoplaySpeed: 2000,
+                infinite: false,
+                slidesToShow: 1,
+                slidesToScroll: 1,
                 speed:1000,
                 dots:false,
                 arrows:true,
+                centerMode: true,
+                centerPadding: '20%'
             });
         });
     </script>
@@ -137,7 +131,7 @@
         });
     </script>
 
-        <!-- 마우스 휠 -->
+    <!-- 마우스 휠 -->
     <script type="text/javascript">
         window.onload = function () {
             var elm = ".box";
@@ -180,7 +174,11 @@
                     });
                 });
             });
+        
+            $("main>section").unwrap();  
+            $("section").css("height","100%");  
         }
+
     </script>
 </head>
 <body>
@@ -196,49 +194,47 @@
                 <li><a href="">제품소개</a></li>
                 <li><a href="">고객센터</a></li>
             </ul>
-            <div class="sublist">
-                <div class="menu1">
-                    <h2 class="hide">회사소개</h2>
-                    <ul class="useguide">
-                        <li><a href="">HB PAPER 소개</a></li>
-                        <li><a href="">히스토리</a></li>
-                        <li><a href="">인증서 및 수상내역</a></li>
-                        <li><a href="">홍보자료</a></li>
-                    </ul>
-                </div>
-                <div class="menu2">
-                    <h2 class="hide">사업소개</h2>
-                    <ul class="useguide">
-                        <li><a href="">사업분야</a></li>
-                        <li><a href="">기술 및 설비</a></li>
-                    </ul>
-                </div>
-                <div class="menu3">
-                    <h2 class="hide">제품소개</h2>
-                    <ul class="useguide">
-                        <li><a href="">종이 봉투</a></li>
-                        <li><a href="">종이 쇼핑백</a></li>
-                        <li><a href="">종이 안전 봉투</a></li>
-                        <li><a href="">종이 식품 용기</a></li>
-                        <li><a href="">종이 테이프</a></li>
-                        <li><a href="">종이 완충재</a></li>
-                        <li><a href="">특수지</a></li>
-                    </ul>
-                </div>
-                <div class="menu4">
-                    <h2 class="hide">고객센터</h2>
-                    <ul class="useguide">
-                        <li><a href="">공지사항</a></li>
-                        <li><a href="">보도자료</a></li>
-                        <li><a href="">온라인문의</a></li>
-                        <li><a href="">찾아오시는 길</a></li>
-                    </ul>
+            <div class="lnb">
+                <div class="sublist">
+                    <div class="menu1">
+                        <h2 class="hide">회사소개</h2>
+                        <ul class="useguide">
+                            <li><a href="">HB PAPER 소개</a></li>
+                            <li><a href="">히스토리</a></li>
+                            <li><a href="">인증서 및 수상내역</a></li>
+                            <li><a href="">홍보자료</a></li>
+                        </ul>
+                    </div>
+                    <div class="menu2">
+                        <h2 class="hide">사업소개</h2>
+                        <ul class="useguide">
+                            <li><a href="">사업분야</a></li>
+                            <li><a href="">기술 및 설비</a></li>
+                        </ul>
+                    </div>
+                    <div class="menu3">
+                        <h2 class="hide">제품소개</h2>
+                        <ul class="useguide">
+                            <li><a href="">종이 봉투</a></li>
+                            <li><a href="">종이 쇼핑백</a></li>
+                            <li><a href="">종이 안전 봉투</a></li>
+                            <li><a href="">종이 식품 용기</a></li>
+                            <li><a href="">종이 테이프</a></li>
+                            <li><a href="">종이 완충재</a></li>
+                            <li><a href="">특수지</a></li>
+                        </ul>
+                    </div>
+                    <div class="menu4">
+                        <h2 class="hide">고객센터</h2>
+                        <ul class="useguide">
+                            <li><a href="">공지사항</a></li>
+                            <li><a href="">보도자료</a></li>
+                            <li><a href="">온라인문의</a></li>
+                            <li><a href="">찾아오시는 길</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-            <span class="lang">
-                <a href="">KOR</a>
-                <a href="">ENG</a>
-            </span>
             <a href="" class="block ham hide">
                 <span></span>
                 <span></span>
@@ -247,28 +243,28 @@
         </div>
     </header>
     <!-- 타이틀영역 -->
-    <div id="title" class="vh100">
+    <div id="title" class="box vh100">
         <div class="wrap titleAni">
             <div class="witem witem1 flex column align-center center">
-                <h2 class="h1">자연으로, <span class="block"></span>스마트하게</h2>
+                <h2 class="h1">자연으로,<span class="block"></span>스마트하게</h2>
                 <p class="h5">그 소중한 가치를 알기에 우리는 돌아가려고 합니다.</p>
             </div>
             <div class="witem witem2 flex column align-center center">
-                <h2 class="h1">자연의 선순환을 꿈꾸며<span class="block"></span>
-                    친환경 포장 문화를 만들어가는 기업</h2>
-                <p class="h5">HB PAPER</p>
+                <h2 class="h1">HB PAPER</h2>
+                <p class="h5">자연의 선순환을 꿈꾸며<span class="block"></span>
+                    친환경 포장 문화를 만들어가는 기업</p>
             </div>
             <div class="witem witem3 flex column align-center center">
-                <h2 class="h1">더 나은,<span class="block"></span>
-                    더 건강한 세상을 만들고자 하는 마음</h2>
-                <p class="h5">ECO PACKAGING</p>
+                <h2 class="h1"></h2>
+                <p class="h5">더 나은,<span class="block"></span>
+                    더 건강한 세상을 만들고자 하는 마음</p>
             </div>
         </div>
     </div>
     <!-- 메인영역 -->
     <main>
         <!-- promotion -->
-        <section id="promotion" class="vh100">
+        <section id="promotion" class="box vh100">
             <div class="wrap flex column center">
                 <iframe data-aos="fade-left" data-aos-duration="1000" width="1520" height="551" src="https://www.youtube.com/embed/9HyfO_V5cLw" title="자연으로 스마트하게, HB PAPER 기업 소개 영상" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 <div data-aos="fade-right" data-aos-duration="1000" class="left flex column">
@@ -282,33 +278,32 @@
             </div>
         </section>
         <!-- business -->
-        <section id="business" class="vh100">
+        <section id="business" class="box vh100">
             <div class="wrap flex column center">
                 <h2 class="h5">BUSINESS</h2>
-                <ul class="centerAni">
-                    <li>
+                <div class="list centerAni">
+                    <div class="box">
                         <a href="" class="block">
                             <h3 class="h4">종이가공</h3>
                             <p class="p">식품포장 · 테이크아웃 · 이커머스</p>
                         </a>
-                    </li>
-                    <li>
+                    </div>
+                    <div class="box">
                         <a href="" class="block">
                             <h3 class="h4">특수지</h3>
                             <p class="p">친환경 코팅 · 친환경 인쇄</p>
                         </a>
-                    </li>
-                    <li>
+                    </div>
+                    <div class="box">
                         <a href="" class="block">
                             <h3 class="h4">사업소개 보러가기</h3>
                         </a>
-                    </li>
-                </ul>
-                </a>
+                    </div>
+                </div>
             </div>
         </section>
         <!-- products -->
-        <section id="products" class="vh100">
+        <section id="products" class="box vh100">
             <div class="pro1 flex column center">
                 <h2 class="h5">PRODUCTS</h2>
                 <p class="h3">High-quality KRAFT PAPER와 PFAS free 친환경 코팅으로<span class="block"></span>
@@ -317,7 +312,7 @@
                 <article>
                     <figure>
                         <a href="">
-                            <img src="img/paper01.jpg" alt="">
+                            <img src="img/paper01.jpg" alt="종이 봉투">
                             <figcaption>
                                 각대봉투, 새철봉투, 창봉투 등<span class="block"></span>
                                 고객의 요구사항에 맞는<span class="block"></span> 
@@ -333,7 +328,7 @@
                 <article>
                     <figure>
                         <a href="">
-                            <img src="img/paper02.jpg" alt="">
+                            <img src="img/paper02.jpg" alt="종이 쇼핑백">
                             <figcaption>
                                 고품질의 크라프트 종이로<span class="block"></span>
                                 직접 생산하여 품질이 뛰어나고,<span class="block"></span>
@@ -349,7 +344,7 @@
                 <article>
                     <figure>
                         <a href="">
-                            <img src="img/paper03.jpg" alt="">
+                            <img src="img/paper03.jpg" alt="종이 안전 봉투">
                             <figcaption>
                                 친환경 종이로 만든 허니콤 완충재를<span class="block"></span>
                                 적용한 브라운 메일러는<span class="block"></span>
@@ -366,7 +361,7 @@
                 <article>
                     <figure>
                         <a href="">
-                            <img src="img/paper04.jpg" alt="">
+                            <img src="img/paper04.jpg" alt="종이 식품 용기">
                             <figcaption>
                                 자체개발한 PFAS free 소재의<span class="block"></span>
                                 수용성 코팅을 적용한<span class="block"></span>
@@ -383,7 +378,7 @@
                 <article>
                     <figure>
                         <a href="">
-                            <img src="img/paper05.jpg" alt="">
+                            <img src="img/paper05.jpg" alt="종이 테이프">
                             <figcaption>
                                 천연 성분으로 만들어 인체에 무해하고<span class="block"></span>
                                 믿을 수 있는 품질의 종이 테이프는<span class="block"></span>
@@ -398,7 +393,7 @@
                 <article>
                     <figure>
                         <a href="">
-                            <img src="img/paper06.jpg" alt="">
+                            <img src="img/paper06.jpg" alt="종이 완충제">
                             <figcaption>                        
                                 기존 플라스틱 에어캡을 대체하는<span class="block"></span>
                                 뛰어난 완충력의 친환경 종이 완충재로,<span class="block"></span>
@@ -413,7 +408,7 @@
                 <article>
                     <figure>
                         <a href="">
-                            <img src="img/paper07.jpg" alt="">
+                            <img src="img/paper07.jpg" alt="특수지">
                             <figcaption>
                                 자체개발한 수용성 코팅을 적용한<span class="block"></span>
                                 친환경 종이 코팅지로,<span class="block"></span>
@@ -428,7 +423,7 @@
                 <article>
                     <figure>
                         <a href="">
-                            <img src="img/paper08.jpg" alt="">
+                            <img src="img/paper08.jpg" alt="더보기">
                             <figcaption>
                                제품소개 보러가기<span class="block"></span>
                                 MORE
@@ -441,7 +436,7 @@
             </div>
         </section>
         <!-- news -->
-        <section id="news" class="vh100">
+        <section id="news" class="box vh100">
             <div class="wrap flex column between">
                 <h2 class="h5">NEWS & NOTICE</h2>
                 <a href="">
@@ -530,7 +525,7 @@
                     <li>
                         <a href="" class="block p">
                             <figure>
-                                <img src="img/news_01.jpg" alt="">
+                                <img src="img/news_01.jpg" alt="보도자료">
                                 <figcaption>
                                     <span>보도자료</span>
                                     에이치비페이퍼, 코엑스 푸드위크 2023서 종이 포장재 알려...
@@ -542,7 +537,7 @@
                     <li>
                         <a href="" class="block p">
                             <figure>
-                                <img src="img/news_02.jpg" alt="">
+                                <img src="img/news_02.jpg" alt="보도자료">
                                 <figcaption>
                                     <span>보도자료</span>
                                     [서울국제식품산업대전] 플라스틱 포장재 대체할 ‘종이 연포장재’ 주목
@@ -554,7 +549,7 @@
                     <li>
                         <a href="" class="block p">
                             <figure>
-                                <img src="img/news_03.jpg" alt="">
+                                <img src="img/news_03.jpg" alt="보도자료">
                                 <figcaption>
                                     <span>보도자료</span>
                                     에이치비페이퍼, 코엑스 푸드위크 2023 참가... 지속가능한 미래 위한 친환경 종이 포장재 출품
@@ -565,7 +560,7 @@
                     <li>
                         <a href="" class="block p">
                             <figure>
-                                <img src="img/news_04.jpg" alt="">
+                                <img src="img/news_04.jpg" alt="공지사항">
                                 <figcaption>
                                     <span>공지사항</span>
                                     HB PAPER가 FOOD WEEK 2023 (2023 서울국제식품산업전)에 참가합니다!
@@ -576,7 +571,7 @@
                     <li>
                         <a href="" class="block p">
                             <figure>
-                                <img src="img/news_05.jpg" alt="">
+                                <img src="img/news_05.jpg" alt="공지사항">
                                 <figcaption>
                                     <span>공지사항</span>
                                     HB PAPER가 InterCHARM Korea 2023 (인터참 코리아 2023)에 참가합니다!
@@ -587,7 +582,7 @@
                     <li>
                         <a href="" class="block p">
                             <figure>
-                                <img src="img/news_06.jpg" alt="">
+                                <img src="img/news_06.jpg" alt="보도자료">
                                 <figcaption>
                                     <span>보도자료</span>
                                     [2023 서울국제식품산업대전] 플라스틱 소재 대체 '종이 연포장재' 눈길
@@ -598,7 +593,7 @@
                     <li>
                         <a href="" class="block p">
                             <figure>
-                                <img src="img/news_07.jpg" alt="">
+                                <img src="img/news_07.jpg" alt="공지사항">
                                 <figcaption>
                                     <span>공지사항</span>
                                     HB PAPER가 SEOUL FOOD 2023(2023 서울국제식품산업대전)에 참가합니다!
@@ -609,7 +604,7 @@
                     <li>
                         <a href="" class="block p">
                             <figure>
-                                <img src="img/news_08.jpg" alt="">
+                                <img src="img/news_08.jpg" alt="보도자료">
                                 <figcaption>
                                     <span>보도자료</span>
                                     HB페이퍼(주), ‘희망2023나눔’ 1000만원과 백미 1000kg 기부
@@ -620,7 +615,7 @@
                     <li>
                         <a href="" class="block p">
                             <figure>
-                                <img src="img/news_09.jpg" alt="">
+                                <img src="img/news_09.jpg" alt="보도자료">
                                 <figcaption>
                                     <span>보도자료</span>
                                     HB페이퍼 아산공장 준공‧‧‧ 친환경 제품 '올인원' 생산라인 구축
@@ -631,7 +626,7 @@
                     <li>
                         <a href="" class="block p">
                             <figure>
-                                <img src="img/news_10.jpg" alt="">
+                                <img src="img/news_10.jpg" alt="지사항">
                                 <figcaption>
                                     <span>공지사항</span>
                                     HB PAPER 공식 블로그가 개설되었습니다.
@@ -646,7 +641,7 @@
     <!-- 우측슬라이드아이콘 -->
     <aside>
         <ul>
-            <li><a href="" class="">INTRO</a></li>
+            <li><a class="currentB" href="">HOME</a></li>
             <li><a href="">VIDEO</a></li>
             <li><a href="">BUSINESS</a></li>
             <li><a href="">PRODUCTS</a></li>
@@ -655,7 +650,7 @@
     </aside>
     <!-- 하단영역 -->
     <footer>
-        <div class="wrap grid">
+        <div class="box wrap grid">
             <h1 class="hide"></h1>
             <ul class="flex fnb">
                 <li><a href="" class="block">회사소개</a></li>
@@ -677,7 +672,6 @@
                 TEL : 041-424-1188 E-Mail : admin@hbgroup.kr</address>
             <p class="p">COPYRIGHTⓒ HB PAPER. ALL RIGHTS RESERVED. ADMIN</p>
         </div>
-        <a class="top">top</a>
     </footer>
 </body>
 </html>
