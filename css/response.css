@@ -49,6 +49,7 @@
     height: 70vw;
     left: 16px;
   }  
+  
   section#promotion .left{
     background-color: #EDF0D300;
     height: fit-content;
@@ -68,11 +69,16 @@
   section#promotion .left p.h3{    
     font-size: calc(25px * 0.7);
   }
+
 /*     business     */
   section#business .wrap ul{
     display: flex;
     flex-direction: column;
     gap: 20px;
+  }
+  section#business .slick-list{
+    
+  padding: 0 !important;
   }
   section#business .wrap ul li:nth-child(1) a::before {
     width: 72vw;
@@ -96,6 +102,10 @@
     transform: rotateY(60deg);
     transition: all 1s;
   }
+  section#business .wrap .list .box a::before{
+    width: calc(345px * 0.9);
+    height: calc(345px * 0.9);
+  }
   section#business .wrap ul li a h3{    
     margin: 0;
   }
@@ -113,7 +123,7 @@
     grid-template-rows: auto auto auto auto;
   }
   section#products .pro2 article figure a img{
-    width: 30vw;
+    width: 40vw;
     height: 30vw;
   }
   section#products .pro2 article figure a figcaption{    
@@ -186,7 +196,7 @@
 
 @media screen and (max-width:768px){
   .vh100{
-    min-height: auto;
+    /*! min-height: auto; */
   }
   .h1 {
     font-size: calc(64px * 0.6);

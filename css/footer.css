@@ -1,5 +1,5 @@
 footer {
-  background-color: #292b1c;
+  background-color: #292929;
 }
 footer .wrap {
   display: flex;
@@ -45,7 +45,7 @@ footer .wrap div ul li a{
   
 }
 footer .wrap select{
-  background-color: #43462d;
+  background-color: #5e5e5b;
   width: 120px;
   height: 30px;
   color: #eee;
@@ -58,11 +58,11 @@ footer .wrap a.hb{
   position: absolute;
   right: calc((100% - 1520px) / 1.5);
   top: 96px;
-  background-image: url(../img/logo2.png);
+  background-image: url(../img/hd_logo_w.png);
   background-size: contain;
   background-repeat: no-repeat;
-  width: 115px;
-  height: 25px;
+  width: 164px;
+  height: 28px;
   font-size: 0;
 }
 footer .wrap a.blog {

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HBPAPER-re</title>
+    <title>HB PAPER-re</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/common.css">
     <!-- //구글폰트 -->
@@ -117,7 +117,35 @@
                 dots:false,
                 arrows:true,
                 centerMode: true,
-                centerPadding: '20%'
+                centerPadding: '20%',
+                responsive:[
+                    {
+                        breakpoint: 1201, //1201미만일 때
+                        settings: {
+                            // infinite: false,
+                            // slidesToShow: 1,
+                            // slidesToScroll: 1,
+                            // speed:1000,
+                            // dots:false,
+                            // arrows:true,
+                            // centerMode: true,
+                            // centerPadding: '20%'
+                        }
+                    },
+                    {
+                        breakpoint: 769, //769미만일 때
+                        settings: {
+                            infinite: false,
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                            speed:1000,
+                            dots:true,
+                            arrows:false,
+                            centerMode: true,
+                            centerPadding: '10%',
+                        }
+                    }
+                ]    
             });
         });
     </script>
@@ -255,7 +283,7 @@
                     친환경 포장 문화를 만들어가는 기업</p>
             </div>
             <div class="witem witem3 flex column align-center center">
-                <h2 class="h1"></h2>
+                <h2 class="h1">ECO PACKAGING</h2>
                 <p class="h5">더 나은,<span class="block"></span>
                     더 건강한 세상을 만들고자 하는 마음</p>
             </div>
@@ -281,30 +309,33 @@
         <section id="business" class="box vh100">
             <div class="wrap flex column center">
                 <h2 class="h5">BUSINESS</h2>
-                <div class="list centerAni">
-                    <div class="box">
+                <p class="p">PFAS Free, Repulpable,<span class="block"></span>Compostable의 가치는<span class="block"></span>
+                    우리 HB PAPER가 나아가고자 하는 사업방향입니다. </p>
+                    <a href=""><p class="h3">사업소개 보러가기</p></a>
+                <div class="list">
+                    <div class="paper">
                         <a href="" class="block">
                             <h3 class="h4">종이가공</h3>
                             <p class="p">식품포장 · 테이크아웃 · 이커머스</p>
                         </a>
                     </div>
-                    <div class="box">
+                    <div class="paper">
                         <a href="" class="block">
                             <h3 class="h4">특수지</h3>
                             <p class="p">친환경 코팅 · 친환경 인쇄</p>
                         </a>
                     </div>
-                    <div class="box">
+                    <!-- <div class="paper">
                         <a href="" class="block">
                             <h3 class="h4">사업소개 보러가기</h3>
                         </a>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </section>
         <!-- products -->
         <section id="products" class="box vh100">
-            <div class="pro1 flex column center">
+            <div class="wrap pro1 flex column center">
                 <h2 class="h5">PRODUCTS</h2>
                 <p class="h3">High-quality KRAFT PAPER와 PFAS free 친환경 코팅으로<span class="block"></span>
                     사람과 자연 모두 건강한 식품 포장재를 만듭니다.</P>

@@ -31,7 +31,7 @@ header .wrap ul.gnb li {
 header .wrap ul.gnb li a {
   display: block;
   line-height: 75px;
-  padding: 0 34px;
+  padding: 0px 30px;
   font-size: 18px;
   font-weight: 600;
   color: #222;
@@ -46,12 +46,12 @@ header .lnb{
   width: 100%;
   left: 0;
   top: 75px;
-  display: none;
+  /*! display: none; */
 }
 header .lnb .sublist {
   background-color: rgba(255, 255, 255, 0.8);
   display: grid;
-  grid-template-columns: 40.5% 150px 150px 150px 150px;
+  grid-template-columns: 52% 150px 150px 150px 150px;
   transition: 0.5s;
   height: 200px;
   justify-content: center;
