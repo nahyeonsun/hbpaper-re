@@ -46,7 +46,7 @@ header .lnb{
   width: 100%;
   left: 0;
   top: 75px;
-  /*! display: none; */
+  display: none;
 }
 header .lnb .sublist {
   background-color: rgba(255, 255, 255, 0.8);

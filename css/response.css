@@ -1,5 +1,5 @@
 @media screen and (max-width:1280px){
-  main .wrap{
+  div.wrap{
     padding: 0 15px;
     box-sizing: border-box;
   }
@@ -13,8 +13,7 @@
     font-size: calc(23px * 0.85);
   }
   .h5{
-    font-size: calc(20px * 0.95);
-    margin-bottom: 5px;
+    font-size: calc(60px * 0.7);
   }
 /*     header     */
   header .wrap h1 a{   
@@ -30,7 +29,9 @@
     padding: 15px;
   }
 /*      title      */
-  
+  #title .wrap{
+    padding: 0 !important;
+  }
   #title .wrap .witem1 p{    
    margin-bottom: 66px;
   }   
@@ -41,8 +42,14 @@
   section#promotion {  
     background-color: #EDF0D3;
   }
+  section#promotion::before{
+    
+  background-color: transparent;
+  }
   section#promotion .wrap{    
     padding: 0 15px;
+    display: flex;
+    align-items: initial;
   }
   section#promotion .wrap iframe{    
     width: calc(100vw - 30px);
@@ -51,26 +58,38 @@
   }  
   
   section#promotion .left{
-    background-color: #EDF0D300;
-    height: fit-content;
-    text-align: center;
     position: absolute;
-    bottom: 74%;
-    align-items: center;
-    width: calc(100vw - 30px);
-    padding-left: 0;
-  }
-  section#promotion .left h2{
-    margin-bottom: 5px;
+    bottom: 73%;
   }
   section#promotion .left p.p{    
-    font-size: calc(76px * 0.5);
+    font-size: calc(24px * 0.7);
   }
   section#promotion .left p.h3{    
     font-size: calc(25px * 0.7);
   }
 
 /*     business     */
+  section#business .wrap{
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+  }
+  section#business .wrap h2{
+    align-self: initial;
+  }
+  section#business .wrap p.p{
+    font-size: calc(24px * 0.65) !important;
+  }
+  section#business .wrap a{
+    
+  margin-bottom: 30px;
+  }
+  section#business .wrap .list .paper a::before{  
+    height: 50vw;
+    width: 100vw;
+    height: calc(345px * 0.45);
+    width: calc(751px * 0.45);
+  }
   section#business .wrap ul{
     display: flex;
     flex-direction: column;
@@ -235,9 +254,11 @@
   #title{
     min-height: auto;
   }
+
   #title .wrap .witem{ 
-    padding: 0 15px;
+    padding: 0 15px !important;
     text-align: center;
+    width: 100vw !important;
   }
   #title .wrap .witem h2{
     margin-bottom: 0;
@@ -259,16 +280,7 @@
     display: block;
   }
 /*      promotion    */
-  section#promotion .left{   
-    bottom: 68%;
-  }
-  section#promotion .left p.p{    
-    font-size: calc(76px * 0.4);
-    margin-bottom: 10px;
-  }
-  section#promotion .left p.h3{
-  font-size: calc(16px * 0.9);
-  }
+
 /*     products     */
   section#products .pro1 > p{    
     display: none;
