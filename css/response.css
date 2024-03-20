@@ -7,7 +7,7 @@
     font-size: calc(54px * 0.85);
   }
   .h3{
-    font-size: calc(40px * 0.85);
+    font-size: calc(19px * 0.85) !important;
   }
   .h4{
     font-size: calc(23px * 0.85);
@@ -63,6 +63,7 @@
   }
   section#promotion .left p.p{    
     font-size: calc(24px * 0.7);
+    display: none;
   }
   section#promotion .left p.h3{    
     font-size: calc(25px * 0.7);
@@ -78,7 +79,7 @@
     align-self: initial;
   }
   section#business .wrap p.p{
-    font-size: calc(24px * 0.65) !important;
+    display: none;
   }
   section#business .wrap a{
     
@@ -142,8 +143,8 @@
     grid-template-rows: auto auto auto auto;
   }
   section#products .pro2 article figure a img{
-    width: 40vw;
-    height: 30vw;
+    width: 35vw;
+    height: 25vw;
   }
   section#products .pro2 article figure a figcaption{    
     display: none;
@@ -222,9 +223,6 @@
   }
   .h2 {
     font-size: calc(58px * 0.6);
-  }
-  .h3{
-    font-size: calc(30px * 0.6);
   }
   .h4{
     font-size: calc(24px * 0.7);
