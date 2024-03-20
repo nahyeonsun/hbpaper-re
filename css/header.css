@@ -43,45 +43,61 @@ header .wrap ul.gnb li a:hover{
 }
 header .lnb{
   position: absolute;
-  width: 100%;
-  left: 0;
+  /*! width: 100%; */
+  right: 0;
   top: 75px;
   display: none;
 }
 header .lnb .sublist {
-  background-color: rgba(255, 255, 255, 0.8);
-  display: grid;
-  grid-template-columns: 52% 150px 150px 150px 150px;
   transition: 0.5s;
-  height: 200px;
-  justify-content: center;
-  padding: 20px 0;
+  width: 234px;
 }
-header .lnb .sublist .menu1{
-  grid-column: 2;
+header .lnb .sublist .menu{
+  
 }
-header .lnb .sublist .menu2{
-
-}
-header .lnb .sublist .menu3{
-
+header .lnb .sublist .menu:not(:nth-child(4)){
+  border-bottom: 1px solid #ccc;
 }
 header .lnb .sublist .menu4{
 
 }
 header .lnb .sublist div h2 {
-
+  font-size: 20px;
+/*   padding: 20px; */
+  background-color: #1f5cbf;
+  color: white;
+  line-height: 3.4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 18px;
+  cursor: pointer;
 }
+header .lnb .sublist div h2::after{
+  content: "";
+  display: inline-block;
+  background-image: url(../img/headermore.svg);
+  width: 30px;
+  height: 30px;
+  transition: 0.5s;
+}
+header .lnb .sublist div h2.rotateUP::after{
+  transform: rotate(180deg);
+  transition: 0.5s;
+}
+
 header .lnb .sublist div ul.useguide {
 
+  background-color: white;
+  padding: 10px 20px;
 }
 header .lnb .sublist div ul.useguide li {
 
-  line-height: 1.8;
+  line-height: 2;
   font-size: 16px;
 }
 header .lnb .sublist div ul.useguide li a {
-
+  color: #111;
 }
 header .lnb .sublist div ul.useguide li a:hover{
   

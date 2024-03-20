@@ -29,12 +29,19 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function(){
-            $("header .wrap ul.gnb li a").hover(function(){
-                $("header .lnb").stop().slideDown();
+            $(".ham").click(function(){
+                $(this).toggleClass("close");
+                $("header .lnb").stop().slideToggle();
+                return false;
+                
             });
-            $("header .lnb").mouseleave(function(){
-                $(this).slideUp();
+        //서브메뉴 제목을 클릭하면 메뉴가 나옴
+            $("header .lnb .sublist div h2").click(function(){
+                $(this).toggleClass("rotateUP");
+                $(this).next("ul").stop().slideToggle();
+                $(this).parent().siblings().find("ul").stop().slideUp();
             });
+        //사이드메뉴 클릭 후 페이지 이동
             $("aside ul li:nth-child(1) a").click(function(){
                 $("html,body").animate({scrollTop:"0px"},800);
                 return false; 
@@ -216,7 +223,7 @@
             <h1>
                 <a href="">HB PAPER</a>
             </h1>
-            <ul class="gnb flex">
+            <ul class="gnb flex hide">
                 <li><a href="">회사소개</a></li>
                 <li><a href="">사업소개</a></li>
                 <li><a href="">제품소개</a></li>
@@ -224,25 +231,25 @@
             </ul>
             <div class="lnb">
                 <div class="sublist">
-                    <div class="menu1">
-                        <h2 class="hide">회사소개</h2>
-                        <ul class="useguide">
+                    <div class="menu">
+                        <h2>회사소개</h2>
+                        <ul class="useguide hide">
                             <li><a href="">HB PAPER 소개</a></li>
                             <li><a href="">히스토리</a></li>
                             <li><a href="">인증서 및 수상내역</a></li>
                             <li><a href="">홍보자료</a></li>
                         </ul>
                     </div>
-                    <div class="menu2">
-                        <h2 class="hide">사업소개</h2>
-                        <ul class="useguide">
+                    <div class="menu">
+                        <h2>사업소개</h2>
+                        <ul class="useguide hide">
                             <li><a href="">사업분야</a></li>
                             <li><a href="">기술 및 설비</a></li>
                         </ul>
                     </div>
-                    <div class="menu3">
-                        <h2 class="hide">제품소개</h2>
-                        <ul class="useguide">
+                    <div class="menu">
+                        <h2>제품소개</h2>
+                        <ul class="useguide hide">
                             <li><a href="">종이 봉투</a></li>
                             <li><a href="">종이 쇼핑백</a></li>
                             <li><a href="">종이 안전 봉투</a></li>
@@ -252,9 +259,9 @@
                             <li><a href="">특수지</a></li>
                         </ul>
                     </div>
-                    <div class="menu4">
-                        <h2 class="hide">고객센터</h2>
-                        <ul class="useguide">
+                    <div class="menu">
+                        <h2>고객센터</h2>
+                        <ul class="useguide hide">
                             <li><a href="">공지사항</a></li>
                             <li><a href="">보도자료</a></li>
                             <li><a href="">온라인문의</a></li>
@@ -263,8 +270,7 @@
                     </div>
                 </div>
             </div>
-            <a href="" class="block ham hide">
-                <span></span>
+            <a href="" class="block ham">
                 <span></span>
                 <span></span>
             </a>
@@ -325,11 +331,6 @@
                             <p class="p">친환경 코팅 · 친환경 인쇄</p>
                         </a>
                     </div>
-                    <!-- <div class="paper">
-                        <a href="" class="block">
-                            <h3 class="h4">사업소개 보러가기</h3>
-                        </a>
-                    </div> -->
                 </div>
             </div>
         </section>
