@@ -3,22 +3,25 @@ section#promotion {
   
 }
 section#promotion::before{
-  content: "";
+/*   content: "";
   background-color: #EDF0D3;
   position: absolute;
   display: block;
   width: 65vw;
   height: 40vw;
-  top: 75px;
+  top: 75px; */
   
 }
 section#promotion .wrap {  
   height: 100%;
-  position: relative;
-  display: grid;
+  /*! position: relative; */
+  /*! display: grid; */
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
+  /*! align-items: center; */
+  display: flex;
   align-items: center;
+  justify-content: center;
 }
 section#promotion .left::after{
   /*! content: ""; */
@@ -31,16 +34,29 @@ section#promotion .left::after{
   left: calc((100% - 1520px) /2 );
 }
 section#promotion .wrap iframe {
-  position: absolute;
-  /*! right: calc((100% - 1520px) /2 ); */
+  /*! position: absolute; */
   z-index: 1;
   width: 41vw;
   height: 23vw;
   grid-column: 2;
+  /*! right: 2px; */
+  transform: translate(47%, 30%);
 }
 section#promotion .left{ 
   justify-content: center;
-  grid-column: 1;
+  width: 100%;
+  transform: translate(0,-219px);
+}
+section#promotion .left::before{
+  content: "";
+  background-color: #EDF0D3;
+  position: absolute;
+  display: block;
+  width: calc(50vw + 60px);
+  height: 39vw;
+  z-index: -1;
+  left: -192px;
+  border-radius: 0 20px 20px 0;
 }
 section#promotion .left h2 {
   
@@ -93,7 +109,7 @@ section#business .wrap h2 {
   grid-row: 1;
   align-self: end;
 }
-section#business .wrap p.p{
+section#business .wrap p.business{
   grid-row: 2;
   font-size: 24px !important;
   line-height: 1.2;

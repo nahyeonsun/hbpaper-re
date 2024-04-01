@@ -28,6 +28,9 @@
   header .wrap span.lang{
     padding: 15px;
   }
+  .ham{
+    font-size: 17px;
+  }
 /*      title      */
   #title .wrap{
     padding: 0 !important;
@@ -39,27 +42,17 @@
     
   }
 /*     promotion     */
-  section#promotion {  
-    background-color: #EDF0D3;
-  }
-  section#promotion::before{
-    
-  background-color: transparent;
-  }
-  section#promotion .wrap{    
-    padding: 0 15px;
-    display: flex;
-    align-items: initial;
-  }
   section#promotion .wrap iframe{    
     width: calc(100vw - 30px);
     height: 70vw;
-    left: 16px;
+    transform: translate(0, 80px);
   }  
-  
   section#promotion .left{
-    position: absolute;
-    bottom: 73%;
+    transform: translate(0, -600px);
+  }
+  section#promotion .left::before{
+    width: 85vw;
+    left: -15px;
   }
   section#promotion .left p.p{    
     font-size: calc(24px * 0.7);
@@ -70,26 +63,20 @@
   }
 
 /*     business     */
-  section#business .wrap{
-    display: flex;
-    align-items: baseline;
-    justify-content: center;
-  }
   section#business .wrap h2{
     align-self: initial;
+    align-self: end;
   }
-  section#business .wrap p.p{
+  section#business .wrap p.business{
     display: none;
   }
-  section#business .wrap a{
-    
-  margin-bottom: 30px;
+  section#business .wrap a{    
+    margin-bottom: 30px;
   }
-  section#business .wrap .list .paper a::before{  
-    height: 50vw;
-    width: 100vw;
-    height: calc(345px * 0.45);
-    width: calc(751px * 0.45);
+  section#business .wrap .list .paper a::before{
+    
+  width: calc(751px * 0.6);
+  height: calc(345px * 0.6);
   }
   section#business .wrap ul{
     display: flex;
@@ -139,12 +126,12 @@
   section#products .pro2{
     width: 100%;
     display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: auto auto auto auto;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto;
   }
   section#products .pro2 article figure a img{
-    width: 35vw;
-    height: 25vw;
+    width: 25vw;
+    height: 15vw;
   }
   section#products .pro2 article figure a figcaption{    
     display: none;
@@ -277,14 +264,33 @@
   #title .wrap h2 span{
     display: block;
   }
-/*      promotion    */
-
+  /* promotion */
+  section#promotion .left{
+    transform: translate(0, -280px);
+  }
+  section#promotion .left::before{   
+    left: -15px;
+    height: 70vw;
+    width: 96vw;
+  }
+  /*  business  */
+  section#business .wrap .list .paper a::before{  
+    height: calc(345px * 0.45);
+    width: calc(751px * 0.45);
+  }
 /*     products     */
   section#products .pro1 > p{    
     display: none;
   }
   section#products .pro2{   
     gap: 5px;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto auto;
+  }
+  section#products .pro2 article figure a img{
+    
+  width: 35vw;
+  height: 25vw;
   }
   section#products .pro2 article h3{    
     font-size: calc(20px * 0.7);
