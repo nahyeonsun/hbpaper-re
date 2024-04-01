@@ -1,14 +1,12 @@
 header {
   position: fixed;
-  width: 100%;
+  width: 100vw;
   z-index: 2;
   border-bottom: solid 2px #ccc;
 }
 header .wrap {
   height: 75px;
   align-items: center;
-  display: grid;
-  grid-template-columns: 1fr auto auto;
 }
 header .wrap h1 {
 
