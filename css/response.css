@@ -64,8 +64,7 @@
 
 /*     business     */
   section#business .wrap h2{
-    align-self: initial;
-    align-self: end;
+  align-self: inherit;
   }
   section#business .wrap p.business{
     display: none;
