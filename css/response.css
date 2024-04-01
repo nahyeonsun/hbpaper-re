@@ -255,6 +255,8 @@
   }
   #title .wrap .witem p{    
    font-size: calc(20px * 0.6);
+   display: block;
+   line-height: 1.2;
   }
   #title .wrap .witem2 h2 span{
     display: block;
@@ -274,6 +276,9 @@
     width: 96vw;
   }
   /*  business  */
+  section#business .wrap{
+    display: flex;
+  }
   section#business .wrap .list .paper a::before{  
     height: calc(345px * 0.45);
     width: calc(751px * 0.45);
