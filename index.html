@@ -19,7 +19,6 @@
     <!--  -->
     <link rel="stylesheet" href="css/font.css">
     <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/ham.css">
     <link rel="stylesheet" href="css/title.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/aside.css">
@@ -42,25 +41,38 @@
                 $(this).parent().siblings().find("ul").stop().slideUp();
             });
         //사이드메뉴 클릭 후 페이지 이동
+            var c1p;
+			var c2p;
+			var c3p;
+            var c4p;
+            var c5p;
+			//각 컨텐츠의 위치(위에서 떨어져있는)
+			//$("요소").offset().top : #area1요소의 위치(위에서부터의)값
+			c1p=$("#title").offset().top; 
+			c2p=$("#promotion").offset().top;
+			c3p=$("#business").offset().top;
+            c4p=$("#products").offset().top;
+            c5p=$("#news").offset().top;
+        // 메뉴클릭시 해당컨텐츠로 페이지스크롤
             $("aside ul li:nth-child(1) a").click(function(){
-                $("html,body").animate({scrollTop:"0px"},800);
-                return false; 
+                $("html,body").animate({scrollTop:c1p},800);
+                return false;
             });
             $("aside ul li:nth-child(2) a").click(function(){
-                $("html,body").animate({scrollTop:$(window).height()},800); 
-                return false; 
+                $("html,body").animate({scrollTop:c2p},800);
+                return false;
             });
             $("aside ul li:nth-child(3) a").click(function(){
-                $("html,body").animate({scrollTop:$(window).height()*2},800); 
-                return false; 
+                $("html,body").animate({scrollTop:c3p},800);
+                return false;
             });
             $("aside ul li:nth-child(4) a").click(function(){
-                $("html,body").animate({scrollTop:$(window).height()*3},800); 
-                return false; 
+                $("html,body").animate({scrollTop:c4p},800);
+                return false;
             });
             $("aside ul li:nth-child(5) a").click(function(){
-                $("html,body").animate({scrollTop:$(window).height()*4},800); 
-                return false; 
+                $("html,body").animate({scrollTop:c5p},800);
+                return false;
             });
             $(window).scroll(function(){
                 if($(window).scrollTop()>$("header").height()){
@@ -71,7 +83,7 @@
                 if($(window).scrollTop()<$("#title").height()){ 
                 // 어사이드메뉴
                     $("aside ul li:nth-child(1) a").addClass("currentB");
-                    $("aside ul li").not("aside ul li:nth-child(1) a").removeClass("currentB");
+                    $("aside ul li a").not("aside ul li:nth-child(1) a").removeClass("currentB");
                     $("footer a.top").addClass("hideTop");
                 }else{
                     $("footer a.top").removeClass("hideTop");
@@ -110,8 +122,8 @@
                 slidesToShow: 1,
                 slidesToScroll: 1,
                 autoplay: true,
-                autoplaySpeed: 2000,
-                speed: 5000,
+                autoplaySpeed: 1000,
+                speed: 4000,
                 dots:true,
                 arrows:true,
                 fade: true
@@ -126,19 +138,6 @@
                 centerMode: true,
                 centerPadding: '20%',
                 responsive:[
-                    {
-                        breakpoint: 1201, //1201미만일 때
-                        settings: {
-                            // infinite: false,
-                            // slidesToShow: 1,
-                            // slidesToScroll: 1,
-                            // speed:1000,
-                            // dots:false,
-                            // arrows:true,
-                            // centerMode: true,
-                            // centerPadding: '20%'
-                        }
-                    },
                     {
                         breakpoint: 769, //769미만일 때
                         settings: {
@@ -270,10 +269,7 @@
                     </div>
                 </div>
             </div>
-            <a href="" class="block ham">
-                <span></span>
-                <span></span>
-            </a>
+            <a href="" class="block ham">MENU</a>
         </div>
     </header>
     <!-- 타이틀영역 -->
@@ -300,8 +296,8 @@
         <!-- promotion -->
         <section id="promotion" class="box vh100">
             <div class="wrap flex column center">
-                <iframe data-aos="fade-left" data-aos-duration="1000" width="1520" height="551" src="https://www.youtube.com/embed/9HyfO_V5cLw" title="자연으로 스마트하게, HB PAPER 기업 소개 영상" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                <div data-aos="fade-right" data-aos-duration="1000" class="left flex column">
+                <iframe width="1520" height="551" src="https://www.youtube.com/embed/9HyfO_V5cLw" title="자연으로 스마트하게, HB PAPER 기업 소개 영상" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <div class="left flex column">
                     <h2 class="h5">MEDIA</h2>
                     <p class="p">HB PEPER<span class="block"></span>
                                 PROMOTION VIDEO</p>
@@ -315,7 +311,7 @@
         <section id="business" class="box vh100">
             <div class="wrap flex column center">
                 <h2 class="h5">BUSINESS</h2>
-                <p class="p">PFAS Free, Repulpable,<span class="block"></span>Compostable의 가치는<span class="block"></span>
+                <p class="business">PFAS Free, Repulpable,<span class="block"></span>Compostable의 가치는<span class="block"></span>
                     우리 HB PAPER가 나아가고자 하는 사업방향입니다. </p>
                     <a href=""><p class="h3">사업소개 보러가기</p></a>
                 <div class="list">
